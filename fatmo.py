@@ -13,10 +13,10 @@ from shutil import rmtree
 APP_ID="[APP ID]"
 APP_SECRET="[APP SECRET]"
 if geteuid() == 0:
-    CFG_FILE=expandvars('/etc/procatmo.ini')
+    CFG_FILE=expandvars('/etc/fatmo.ini')
     BLOCK_DIR='/netatmo/'
 else:
-    CFG_FILE=expandvars('$HOME/.config/procatmo.ini')
+    CFG_FILE=expandvars('$HOME/.config/fatmo.ini')
     BLOCK_DIR='/tmp/netatmo/'
 
 SLEEP=60*10 #10 minute intervals

@@ -1,0 +1,10 @@
+[Unit]
+Description=Procatmo
+
+[Service]
+TimeoutStartSec=0
+ExecStart=/home/will/GitRepos/procatmo/procatmo.py
+
+[Install]
+WantedBy=multi-user.target
+

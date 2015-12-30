@@ -1,9 +1,9 @@
 [Unit]
-Description=Procatmo
+Description=Fatmo
 
 [Service]
 TimeoutStartSec=0
-ExecStart=/home/will/GitRepos/procatmo/procatmo.py
+ExecStart=fatmo.py
 
 [Install]
 WantedBy=multi-user.target

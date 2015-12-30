@@ -5,18 +5,18 @@ import signal
 import sys
 from json import loads
 from time import time, sleep
-from os.path import realpath, expandvars, exists
-from os import makedirs, geteuid
+from os.path import realpath, expanduser, exists
+from os import makedirs, geteuid, getenv
 from shutil import rmtree
 
 #Change this!
 APP_ID="[APP ID]"
 APP_SECRET="[APP SECRET]"
 if geteuid() == 0:
-    CFG_FILE=expandvars('/etc/fatmo.ini')
+    CFG_FILE='/etc/fatmo.ini'
     BLOCK_DIR='/netatmo/'
 else:
-    CFG_FILE=expandvars('$HOME/.config/fatmo.ini')
+    CFG_FILE=getenv('XDG_CONFIG_HOME', expanduser('~') + '/.config') + '/fatmo.ini'
     BLOCK_DIR='/tmp/netatmo/'
 
 SLEEP=60*10 #10 minute intervals

@@ -10,8 +10,8 @@ from os import makedirs, geteuid
 from shutil import rmtree
 
 #Change this!
-APP_ID="5682cbffcce37c02257c41fe"
-APP_SECRET="N1M2YEYal6y2j89ve8AVdXxCJ30"
+APP_ID="[APP ID]"
+APP_SECRET="[APP SECRET]"
 if geteuid() == 0:
     CFG_FILE=expandvars('/etc/procatmo.ini')
     BLOCK_DIR='/netatmo/'
